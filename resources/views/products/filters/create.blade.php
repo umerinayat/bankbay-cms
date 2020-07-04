@@ -138,7 +138,7 @@
     $productCategories.on('change', function ( e ) {
         var productId = $productCategories.val();
 
-        axios.get('http://127.0.0.1:8001/product-filter/getFilter/' + productId)
+        axios.get('/product-filter/getFilter/' + productId)
         .then((response) => {
             if ( response.data[0] != undefined) {
                 productFilterFieldsCon.empty();
